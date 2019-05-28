@@ -1,0 +1,7 @@
+D:\vlad_C#\homework_all\Task2_RandomGame\obj\Debug\Task2_RandomGame.csprojAssemblyReference.cache
+D:\vlad_C#\homework_all\Task2_RandomGame\obj\Debug\Task2_RandomGame.csproj.CoreCompileInputs.cache
+D:\vlad_C#\homework_all\Task2_RandomGame\obj\Debug\homework_all.exe
+D:\vlad_C#\homework_all\Task2_RandomGame\obj\Debug\homework_all.pdb
+D:\vlad_C#\homework_all\Task2_RandomGame\bin\Debug\homework_all.exe.config
+D:\vlad_C#\homework_all\Task2_RandomGame\bin\Debug\homework_all.exe
+D:\vlad_C#\homework_all\Task2_RandomGame\bin\Debug\homework_all.pdb
