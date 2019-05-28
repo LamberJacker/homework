@@ -34,7 +34,6 @@ namespace homework_all
                 else
                 {
                     Console.WriteLine("- Ты не угадал " + userValue + " не то число которое я загадал");
-                    //Console.WriteLine("У тебя осталось " + (5-і) + " попыток");
                     Console.WriteLine("- Даю тебе подсказку, мое число " + (startValue > userValue ? "больше" : "меньше"));
                 }
             }
