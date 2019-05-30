@@ -31,24 +31,13 @@ namespace homework_all
             int j = 0; //счетчик для цыкла short
             int k = 0; //счетчик для цыкла Int
 
-            while (flagByte == false & flagShort== false & flagInt == false)
+            while(flagByte == false & flagShort== false & flagInt == false)
             {
-            rndValue = rnd.Next();
-                if (rndValue<128)
+                rndValue=rnd.Next();                     
+                switch(rndValuse)
                 {
-                arrByte[i]=rndValue;
-                i++;
-                } 
-                    else if (rndValue<32768)
-                    {
-                    arrShort[j]=rndValue;
-                    j++;
-                    }
-                        else
-                        {
-                        arrInt[k]=rndValue;
-                        k++;
-                        }
+                case 
+                }
             }
         }
     }
