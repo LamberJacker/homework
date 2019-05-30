@@ -24,7 +24,7 @@ namespace homework_all
 
             while(flagByte == false | flagShort == false | flagInt == false)
             {
-                rndValue=rnd.Next(1000000);
+                rndValue=rnd.Next(100000000000);
                 Console.WriteLine("Проверка самого себя рандомное число = "+ rndValue);
                 
                 if (rndValue <= 255 & i < 10)
