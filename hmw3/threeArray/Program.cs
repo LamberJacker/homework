@@ -33,10 +33,38 @@ namespace homework_all
 
             while(flagByte == false & flagShort== false & flagInt == false)
             {
-                rndValue=rnd.Next();                     
+                rndValue=rnd.Next();
+                Console.WriteLine("Проверка самого себя рандомное число = "+ rndValue);
                 switch(rndValuse)
                 {
-                case 
+                case int check when (rndValue<128):
+                        {
+                        if(rndValue == arrByte[10])
+                        {
+                        flagByte == true;
+                        goto case 2; 
+                        }                       
+                        arrByte[i]=rndValue;
+                        i++;
+                        }
+                case int check when (rndValue<32768):
+                        {
+                        if(rndValue == arrShort[10])
+                        {
+                        flagShort == true;
+                        goto case 3; 
+                        }                     
+                        arrShort[j]=rndValue;
+                        j++;
+                        }
+                default:
+                        {
+                        if(rndValue == arrShort[10]);                       
+                        arrInt[k]=rndValue;
+                        k++;
+                        }
+
+
                 }
             }
         }
