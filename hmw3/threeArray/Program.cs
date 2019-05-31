@@ -24,7 +24,7 @@ namespace homework_all
 
             while(flagByte == false | flagShort == false | flagInt == false)
             {
-                rndValue=rnd.Next(100000000000);
+                rndValue=rnd.Next(100000); //поставил условие максимального числа для быстрой проверки (чтобы быстро забить массивы), 100000 > 32767, что больше SHort
                 Console.WriteLine("Проверка самого себя рандомное число = "+ rndValue);
                 
                 if (rndValue <= 255 & i < 10)
