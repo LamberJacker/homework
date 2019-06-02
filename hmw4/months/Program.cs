@@ -7,8 +7,9 @@ namespace homework_all
         static void Main()
         {
             //Исходные даные
-            int[] arr = new int [12]; //Длина массива
+            int[] arr = new int [12];
             
+            //Заполнение массива
             for (int i = 0; i < arr.Length; i++)
             {
                 if (i == 1) 
