@@ -1,0 +1,6 @@
+D:\vlad_C#\homework_all\hmw4\drawSquare\obj\Debug\square.csproj.CoreCompileInputs.cache
+D:\vlad_C#\homework_all\hmw4\drawSquare\obj\Debug\homework_all.exe
+D:\vlad_C#\homework_all\hmw4\drawSquare\obj\Debug\homework_all.pdb
+D:\vlad_C#\homework_all\hmw4\drawSquare\bin\Debug\homework_all.exe.config
+D:\vlad_C#\homework_all\hmw4\drawSquare\bin\Debug\homework_all.exe
+D:\vlad_C#\homework_all\hmw4\drawSquare\bin\Debug\homework_all.pdb
