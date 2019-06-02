@@ -14,12 +14,17 @@ namespace homework_all
 			{
                 Console.Write(arr[i]+" ");
 			}
+            
             do
             {
                 Console.Write("\n\nP.S. Нажимай \"a\" или \"d\" что бы двигать собачку влево вправо соответсвенно" );
                 turn = Convert.ToChar(Console.Read()); //ход игрока
                 
-                if (arr[9] == '@') break;   
+                if (arr[9] == '@') 
+                {
+                        
+                break; 
+                }
                     
                     switch(turn)
                     {
@@ -28,7 +33,6 @@ namespace homework_all
 		            	{
 
 		            	}
-
                         break;
                         case 'd':
 
