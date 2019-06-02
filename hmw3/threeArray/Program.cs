@@ -2,10 +2,10 @@
 
 namespace homework_all
 {
-    class Task1_ThreeArray
+    class ThreeArray
     {
         static void Main()
-        { /*
+        { 
             //Исходные даные
             byte[] arrByte = new byte [10];
             short[] arrShort = new short [10];
@@ -19,22 +19,23 @@ namespace homework_all
             int k = 0; //счетчик для цыкла Int
             int counter = 0; //счетчик для цыкла Int
 
-            while(i < 10 || j < 10 || k < 100)
+            while(i < 10 || j < 10 || k < 10)
             {
-                rndValue=rnd.Next(100000); //поставил условие максимального числа для быстрой проверки (чтобы быстро забить массивы), 100000 > 32767, что больше SHort
+                rndValue=rnd.Next(); //поставил условие максимального числа для быстрой проверки (чтобы быстро забить массивы)
                 //Console.WriteLine("Проверка самого себя рандомное число = "+ rndValue);
                 counter++;
                 if (rndValue <= byte.MaxValue && i < 10)
                 {
-                arrByte[i++] = (byte) rndValue;
+                    arrByte[i++] = (byte) rndValue;
                 }
-                else if (rndValue <= short.MaxValue && j < 10)
-                {
-                arrShort[j++] = (short) rndValue;
-                } else if (k < 10)
-                {
-                arrInt[k++] = rndValue;
-                }
+                    else if (rndValue <= short.MaxValue && j < 10)
+                    {
+                        arrShort[j++] = (short) rndValue;
+                    }   
+                        else if (k < 10)
+                        {
+                        arrInt[k++] = rndValue;
+                        }
             }
 
             // Выводим на экран:
@@ -52,13 +53,9 @@ namespace homework_all
             for (int m = 0; m < 10; m++)
 			{
                 Console.WriteLine("Int ["+ m + "]" + " = " + arrInt[m]);
-			}
-            Console.WriteLine("counter = "+counter);
+            }
+            Console.WriteLine("\ncounter = "+counter);
             Console.ReadKey();
-            */
-
-
-
         }
     }
 }
