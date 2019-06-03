@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace homework_all
 {
@@ -14,19 +14,26 @@ namespace homework_all
             {
                 if (i == 1) 
                     {
-                    arr[i] = 28;
-                    continue;
+                        arr[i] = 28;
+                        continue;
                     } 
-                if (i%2 == 0) arr[i] = 31;
-                else arr[i] = 30;
+                if (i == 7) 
+                    {
+                        arr[i] = 31;
+                        continue;
+                    }
+                if (i%2 == 0 & i<7 ) arr[i] = 31;
+                else if (i < 7) arr[i] = 30;
+                else if (i%2 == 0 & i > 7) arr[i] = 30;
+                else arr[i] = 31;
             }
 
             // Выводим на экран:
             Console.WriteLine("Дней в месяцах года: ");
             for (int i = 0; i < arr.Length; i++)
-			{
+            {
                 Console.WriteLine("В " + (i+1) + " месяце " + arr[i]+" дней ");
-			}
+            }
             Console.ReadKey();
         }
     }
