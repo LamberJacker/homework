@@ -5,3 +5,10 @@ D:\vlad_C#\homework_all\hmw3\gameDog\obj\Debug\homework_all.pdb
 D:\vlad_C#\homework_all\hmw3\gameDog\bin\Debug\homework_all.exe.config
 D:\vlad_C#\homework_all\hmw3\gameDog\bin\Debug\homework_all.exe
 D:\vlad_C#\homework_all\hmw3\gameDog\bin\Debug\homework_all.pdb
+D:\vlad_C#\homework\hmw3\gameDog\obj\Debug\gameDog.csprojAssemblyReference.cache
+D:\vlad_C#\homework\hmw3\gameDog\obj\Debug\gameDog.csproj.CoreCompileInputs.cache
+D:\vlad_C#\homework\hmw3\gameDog\obj\Debug\homework_all.exe
+D:\vlad_C#\homework\hmw3\gameDog\obj\Debug\homework_all.pdb
+D:\vlad_C#\homework\hmw3\gameDog\bin\Debug\homework_all.exe.config
+D:\vlad_C#\homework\hmw3\gameDog\bin\Debug\homework_all.exe
+D:\vlad_C#\homework\hmw3\gameDog\bin\Debug\homework_all.pdb
