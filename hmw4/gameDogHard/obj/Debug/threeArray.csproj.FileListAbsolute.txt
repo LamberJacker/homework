@@ -1,0 +1,7 @@
+D:\vlad_C#\homework_all\hmw3\threeArray\obj\Debug\threeArray.csprojAssemblyReference.cache
+D:\vlad_C#\homework_all\hmw3\threeArray\obj\Debug\threeArray.csproj.CoreCompileInputs.cache
+D:\vlad_C#\homework_all\hmw3\threeArray\obj\Debug\homework_all.exe
+D:\vlad_C#\homework_all\hmw3\threeArray\obj\Debug\homework_all.pdb
+D:\vlad_C#\homework_all\hmw3\threeArray\bin\Debug\homework_all.exe.config
+D:\vlad_C#\homework_all\hmw3\threeArray\bin\Debug\homework_all.exe
+D:\vlad_C#\homework_all\hmw3\threeArray\bin\Debug\homework_all.pdb

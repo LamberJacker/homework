@@ -1,0 +1,3 @@
+D:\vlad_C#\homework_all\Task2_DiscountSwitch\obj\Debug\Task2_DiscountSwicth.csproj.CoreCompileInputs.cache
+D:\vlad_C#\homework_all\Task2_DiscountSwitch\obj\Debug\homework_all.exe
+D:\vlad_C#\homework_all\Task2_DiscountSwitch\obj\Debug\homework_all.pdb
