@@ -62,12 +62,12 @@ namespace homework_all
                         for (int i = 0; i < arr.Length; i++)
                         {
                             for (int j = 0; j < arr.Length; j++ )
-			                {
+			                {/*
                                 if (arr[i][j] == '*' || arr[i][j] == '+') //Cкрываем бомбочки от пользователя
                                 {
                                     Console.Write("_ ");
                                     continue;
-                                }
+                                }*/
                                 Console.Write(arr[i][j]+" ");
 			                }
                             Console.WriteLine("\n");
