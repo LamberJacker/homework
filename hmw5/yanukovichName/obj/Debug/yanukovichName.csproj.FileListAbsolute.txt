@@ -1,0 +1,12 @@
+G:\3. ITEA\С#_Basse\homework\hmw5\yanukovichName\bin\Debug\homework_all.exe.config
+G:\3. ITEA\С#_Basse\homework\hmw5\yanukovichName\bin\Debug\homework_all.exe
+G:\3. ITEA\С#_Basse\homework\hmw5\yanukovichName\bin\Debug\homework_all.pdb
+G:\3. ITEA\С#_Basse\homework\hmw5\yanukovichName\obj\Debug\yanukovichName.csproj.CoreCompileInputs.cache
+G:\3. ITEA\С#_Basse\homework\hmw5\yanukovichName\obj\Debug\homework_all.exe
+G:\3. ITEA\С#_Basse\homework\hmw5\yanukovichName\obj\Debug\homework_all.pdb
+G:\3. ITEA\С#_Basse\homework\hmw5\yanukovichName (2)\bin\Debug\homework_all.exe.config
+G:\3. ITEA\С#_Basse\homework\hmw5\yanukovichName (2)\bin\Debug\homework_all.exe
+G:\3. ITEA\С#_Basse\homework\hmw5\yanukovichName (2)\bin\Debug\homework_all.pdb
+G:\3. ITEA\С#_Basse\homework\hmw5\yanukovichName (2)\obj\Debug\yanukovichName.csproj.CoreCompileInputs.cache
+G:\3. ITEA\С#_Basse\homework\hmw5\yanukovichName (2)\obj\Debug\homework_all.exe
+G:\3. ITEA\С#_Basse\homework\hmw5\yanukovichName (2)\obj\Debug\homework_all.pdb
