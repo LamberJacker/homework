@@ -1,0 +1,7 @@
+G:\3. ITEA\С#_Basse\homework\hmw5\stringArray3x\bin\Debug\homework_all.exe.config
+G:\3. ITEA\С#_Basse\homework\hmw5\stringArray3x\bin\Debug\homework_all.exe
+G:\3. ITEA\С#_Basse\homework\hmw5\stringArray3x\bin\Debug\homework_all.pdb
+G:\3. ITEA\С#_Basse\homework\hmw5\stringArray3x\obj\Debug\stringArray3x.csproj.CoreCompileInputs.cache
+G:\3. ITEA\С#_Basse\homework\hmw5\stringArray3x\obj\Debug\homework_all.exe
+G:\3. ITEA\С#_Basse\homework\hmw5\stringArray3x\obj\Debug\homework_all.pdb
+G:\3. ITEA\С#_Basse\homework\hmw5\stringArray3x\obj\Debug\stringArray3x.csprojAssemblyReference.cache
