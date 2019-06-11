@@ -15,6 +15,14 @@ namespace TaskFigure
 			double perimeter = 2 * 3.14159265358979 * radius;
             return perimeter;
 		}
+        public string Color()
+        {
+            string[] color = {"Yellow","Green","Blue","Brown","White","Red","Orange","Pink","Gray","Black"};
+            Random rnd = new Random();
+            int rndValue = rnd.Next(0, color.Length-1);
+            string rndColor = color[rndValue];
+            return rndColor;
+        }
 	}
 
     public class Square
@@ -29,6 +37,14 @@ namespace TaskFigure
 			double perimeter = 4 * side;
             return perimeter;
 		}
+        public string Color()
+        {
+            string[] color = {"Yellow","Green","Blue","Brown","White","Red","Orange","Pink","Gray","Black"};
+            Random rnd = new Random();
+            int rndValue = rnd.Next(0, color.Length-1);
+            string rndColor = color[rndValue];
+            return rndColor;
+        }
 	}
     
     public class Triangle
@@ -44,6 +60,14 @@ namespace TaskFigure
 		    double perimeter = side + side + side;
             return perimeter;
 	    }
+        public string Color()
+        {
+            string[] color = {"Yellow","Green","Blue","Brown","White","Red","Orange","Pink","Gray","Black"};
+            Random rnd = new Random();
+            int rndValue = rnd.Next(0, color.Length-1);
+            string rndColor = color[rndValue];
+            return rndColor;
+        }
     }
     
     public class Program
@@ -81,6 +105,7 @@ namespace TaskFigure
                                 Circle newCircle = new Circle();
                                 Console.WriteLine("Периметр(длина) круга составляэт : {0:#.###} мм", newCircle.Perim(userInputRadius));
                                 Console.WriteLine("Площадь круга равна : {0:#.###} кв.мм", newCircle.Area(userInputRadius));
+                                Console.WriteLine("Цвет круга : {0}", newCircle.Color());
                             }
 
                         } while (checkCircle == false);
@@ -105,6 +130,7 @@ namespace TaskFigure
                                 Square newSquare = new Square();
                                 Console.WriteLine("Периметр квадрата равен : {0:#.###} мм", newSquare.Perim(userInputSide));
                                 Console.WriteLine("Площадь квадрата равна : {0:#.###} кв.мм", newSquare.Area(userInputSide));
+                                Console.WriteLine("Цвет квадрата : {0}", newSquare.Color());
                             }
 
                         } while (checkSquare == false);
@@ -130,6 +156,7 @@ namespace TaskFigure
                                 Triangle newTriangle = new Triangle();
                                 Console.WriteLine("Периметр треугольнка равен : {0:#.###} мм", newTriangle.PerimThreeSide(userInputSide));
                                 Console.WriteLine("Площадь треугольника равна : {0:#.###} кв.мм", newTriangle.AreaThreeSide(userInputSide));
+                                Console.WriteLine("Цвет треугольника : {0}", newTriangle.Color());
                             }
                         } while (checkTriangle == false);
                         break;
