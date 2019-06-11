@@ -5,69 +5,99 @@ namespace TaskFigure
     
 	public class Circle
 	{   
-		public double Area(double radius)
+        private double radius;
+        private double area;
+        private double perim;
+        private string color;
+
+        public bool SetChacteristicFigure(string rad) // безопасно установить значение радиуса и посчитать характеристики фигуры
 		{
-            double area = 3.14159265358979 * radius * radius;
-            return area;
+            bool userInputRadiusTry = Double.TryParse(rad, out radius);
+            if (userInputRadiusTry & radius > 0) 
+            {
+                perim = 2 * 3.14159265358979 * radius;
+                area = 3.14159265358979 * radius * radius;
+                string[] arrColor = {"Yellow","Green","Blue","Brown","White","Red","Orange","Pink","Gray","Black"};
+                Random rnd = new Random();
+                int rndValue = rnd.Next(0, arrColor.Length-1);
+                color = arrColor[rndValue];
+                return true;
+            }
+            else return false;
 		}
-		public double Perim(double radius)
-		{
-			double perimeter = 2 * 3.14159265358979 * radius;
-            return perimeter;
+        public void ShowCharacteristic() // метод выводит на экран все даные о фигуре
+	    {
+            Console.WriteLine("Радиус круга равен : {0} мм", radius);
+            Console.WriteLine("Периметр(длина) круга составляэт : {0:#.###} мм", perim);
+            Console.WriteLine("Площадь круга равна : {0:#.###} кв.мм", area);
+            Console.WriteLine("Цвет круга : {0}", color);
 		}
-        public string Color()
-        {
-            string[] color = {"Yellow","Green","Blue","Brown","White","Red","Orange","Pink","Gray","Black"};
-            Random rnd = new Random();
-            int rndValue = rnd.Next(0, color.Length-1);
-            string rndColor = color[rndValue];
-            return rndColor;
-        }
 	}
 
     public class Square
 	{   
-		public double Area(double side)
+        private double side;
+        private double perim;
+        private double area;
+        private string color;
+        
+        public bool SetChacteristicFigure(string sideString) // безопасно установить значение стороны и посчитать характеристики фигуры
 		{
-            double area = side * side;
-            return area;
+            bool userInputSideTry = Double.TryParse(sideString, out side);
+            if (userInputSideTry & side > 0) 
+            {
+                perim = 4 * side;
+                area = side * side;
+                string[] arrColor = {"Yellow","Green","Blue","Brown","White","Red","Orange","Pink","Gray","Black"};
+                Random rnd = new Random();
+                int rndValue = rnd.Next(0, arrColor.Length-1);
+                color = arrColor[rndValue];
+                return true;
+            }
+            else return false;
 		}
-		public double Perim(double side)
-		{
-			double perimeter = 4 * side;
-            return perimeter;
+        public void ShowCharacteristic() // метод выводит на экран все даные о фигуре
+	    {
+            Console.WriteLine("Сторона квадрата равна : {0} мм", side);
+            Console.WriteLine("Периметр квадрата равен : {0:#.###} мм", perim);
+            Console.WriteLine("Площадь квадрата равна : {0:#.###} кв.мм", area);
+            Console.WriteLine("Цвет квадрата : {0}", color);
 		}
-        public string Color()
-        {
-            string[] color = {"Yellow","Green","Blue","Brown","White","Red","Orange","Pink","Gray","Black"};
-            Random rnd = new Random();
-            int rndValue = rnd.Next(0, color.Length-1);
-            string rndColor = color[rndValue];
-            return rndColor;
-        }
 	}
     
     public class Triangle
     {   
-	    public double AreaThreeSide(double side)
-	    {
-            double perimeter = (side + side + side)/2;
-            double area = Math.Sqrt(perimeter * (perimeter - side) * (perimeter - side) * (perimeter - side));
-            return area;
-	    }
-	    public double PerimThreeSide(double side)
-	    {
-		    double perimeter = side + side + side;
-            return perimeter;
-	    }
-        public string Color()
+        private double side1;
+        private double side2;
+        private double side3;
+        private double perim;
+        private double area;
+        private string color;
+
+        public bool SetChacteristicFigure(string sideA, string sideB, string sideC) // безопасно установить значение стороны и посчитать характеристики фигуры
         {
-            string[] color = {"Yellow","Green","Blue","Brown","White","Red","Orange","Pink","Gray","Black"};
-            Random rnd = new Random();
-            int rndValue = rnd.Next(0, color.Length-1);
-            string rndColor = color[rndValue];
-            return rndColor;
+            bool Side1Try = Double.TryParse(sideA, out side1);
+            bool Side2Try = Double.TryParse(sideB, out side2);
+            bool Side3Try = Double.TryParse(sideC, out side3);
+            if (Side1Try & Side2Try & Side3Try & side1 > 0 & side2 > 0 & side3 > 0) 
+            {
+                perim = (side1 + side2 + side3)/2;
+                area = Math.Sqrt(perim * (perim - side1) * (perim - side2) * (perim - side3));
+                string[] arrColor = {"Yellow","Green","Blue","Brown","White","Red","Orange","Pink","Gray","Black"};
+                Random rnd = new Random();
+                int rndValue = rnd.Next(0, arrColor.Length-1);
+                color = arrColor[rndValue];
+                return true;
+            }
+            else return false;
         }
+        public void ShowCharacteristic() // метод выводит на экран все даные о фигуре
+	    {
+            Console.WriteLine("Стороны треугольника равны : {0}, {1}, {2} мм", side1, side2, side3);
+            Console.WriteLine("Периметр треугольнка равен : {0:#.###} мм", perim);
+            Console.WriteLine("Площадь треугольника равна : {0:#.###} кв.мм", area);
+            Console.WriteLine("Цвет треугольника : {0}", color);
+		}
     }
     
     public class Program
@@ -79,89 +109,76 @@ namespace TaskFigure
             Console.WriteLine("\"1\" - Круг;\n\"2\" - Квадрат;\n\"3\" - Треугольник;\n\"0\" - Выход из программы.");
 
             bool checkAll = false; // проверка первго ввода пользователя
-
             do
             {
-                Console.WriteLine("Вводи число фигуры:");
+                Console.WriteLine("\nВводи число фигуры:");
                 string userInput = Console.ReadLine(); //выбор пользователя
                 switch (userInput)
                 {
                     case "1": // Круг
                         bool checkCircle = false; // проверка второго ввода пользователя
                         Console.WriteLine("Ты выбрал круг, введи радиус в миллиметрах :");
+                        Circle newCircle = new Circle();
                         do
                         {
-                            double userInputRadius = 0;
-                            bool userInputRadiusTry = Double.TryParse(Console.ReadLine(), out userInputRadius);
-                            if (userInputRadiusTry == false || userInputRadius <= 0)
+                            bool cheker = newCircle.SetChacteristicFigure(Console.ReadLine());
+                            if (cheker == false)
                             {
                                 Console.WriteLine("Ты ввел неправильное значение радиуса в мм, повтори...");
                             }
                             else
                             {
                                 checkCircle = true;
-                                Console.WriteLine("Радиус круга равен : {0} мм", userInputRadius);
-                                Circle newCircle = new Circle();
-                                Console.WriteLine("Периметр(длина) круга составляэт : {0:#.###} мм", newCircle.Perim(userInputRadius));
-                                Console.WriteLine("Площадь круга равна : {0:#.###} кв.мм", newCircle.Area(userInputRadius));
-                                Console.WriteLine("Цвет круга : {0}", newCircle.Color());
+                                newCircle.ShowCharacteristic();
                             }
-
                         } while (checkCircle == false);
                         break;
 
                     case "2": // Квадрат
                         bool checkSquare = false; // проверка второго ввода пользователя
                         Console.WriteLine("Ты выбрал квадрат, введи сторону квадрата в миллиметрах :");
+                        Square newSquare = new Square();
                         do
                         {
-                            double userInputSide = 0;
-                            bool userInputSideTry = Double.TryParse(Console.ReadLine(), out userInputSide);
-                            if (userInputSideTry == false || userInputSide <= 0)
+                            bool cheker = newSquare.SetChacteristicFigure(Console.ReadLine());
+                            if (cheker == false)
                             {
                                 Console.WriteLine("Ты ввел неправильное значение стороны в мм, повтори...");
                             }
                             else
                             {
                                 checkSquare = true;
-                                Console.WriteLine("Сторона квадрата равна : {0} мм", userInputSide);
-                                Square newSquare = new Square();
-                                Console.WriteLine("Периметр квадрата равен : {0:#.###} мм", newSquare.Perim(userInputSide));
-                                Console.WriteLine("Площадь квадрата равна : {0:#.###} кв.мм", newSquare.Area(userInputSide));
-                                Console.WriteLine("Цвет квадрата : {0}", newSquare.Color());
+                                newSquare.ShowCharacteristic();
                             }
-
                         } while (checkSquare == false);
-
                         break;
 
                     case "3": // Треугольник
                         bool checkTriangle = false; // проверка второго ввода пользователя
-                        Console.WriteLine("Ты выбрал треугольник, есть несколько спсобов подсчитать периметр и площать.\nВыбери вариант который тебе известен:");
-                        //Console.WriteLine("\"1\" - Три стороны треугольника a, b, c");
-                        //Console.WriteLine("\"2\" - Три стороны треугольника a, b, c");
-                        //Console.WriteLine("\"3\" - Три стороны треугольника a, b, c");
+                        Console.WriteLine("Ты выбрал треугольник, введи три стороны");
+                        Triangle newTriangle = new Triangle();
                         do
                         {
-                            double userInputSide = 0;
-                            bool userInputSideTry = Double.TryParse(Console.ReadLine(), out userInputSide);
-                            if (userInputSideTry == false || userInputSide <= 0)
+                            Console.WriteLine("Сторона А :");
+                            string side1 = Console.ReadLine();
+                            Console.WriteLine("Сторона B :");
+                            string side2 = Console.ReadLine();
+                            Console.WriteLine("Сторона C :");
+                            string side3 = Console.ReadLine();
+                            bool cheker = newTriangle.SetChacteristicFigure(side1, side2, side3);
+                            if (cheker == false)
                             {
                                 Console.WriteLine("Ты ввел неправильное значение стороны в мм, повтори...");
                             }
                             else
                             {
                                 checkSquare = true;
-                                Console.WriteLine("Сторона треугольника равна : {0} мм", userInputSide);
-                                Triangle newTriangle = new Triangle();
-                                Console.WriteLine("Периметр треугольнка равен : {0:#.###} мм", newTriangle.PerimThreeSide(userInputSide));
-                                Console.WriteLine("Площадь треугольника равна : {0:#.###} кв.мм", newTriangle.AreaThreeSide(userInputSide));
-                                Console.WriteLine("Цвет треугольника : {0}", newTriangle.Color());
+                                newTriangle.ShowCharacteristic();
                             }
                         } while (checkTriangle == false);
                         break;
                     case "0":
-                        Console.WriteLine("пока)");
+                        Console.WriteLine("пока, надеюсь ты получил ответ");
                         checkAll = true;
                         break;
                     default:
