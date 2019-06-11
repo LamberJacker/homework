@@ -76,14 +76,14 @@ namespace TaskFigure
         {
             Console.WriteLine("Даная програма считает характеристики фигур");
             Console.WriteLine("Введите цыфру фигуры для которой нужно определить характеристики периметра, площади и цвета.");
-            Console.WriteLine("\"1\" - Круг;\n\"2\" - Квадрат;\n\"3\" - Треугольник\nВводи число :");
+            Console.WriteLine("\"1\" - Круг;\n\"2\" - Квадрат;\n\"3\" - Треугольник;\n\"0\" - Выход из программы.");
 
             bool checkAll = false; // проверка первго ввода пользователя
 
             do
             {
+                Console.WriteLine("Вводи число фигуры:");
                 string userInput = Console.ReadLine(); //выбор пользователя
-
                 switch (userInput)
                 {
                     case "1": // Круг
@@ -100,7 +100,6 @@ namespace TaskFigure
                             else
                             {
                                 checkCircle = true;
-                                checkAll = true;
                                 Console.WriteLine("Радиус круга равен : {0} мм", userInputRadius);
                                 Circle newCircle = new Circle();
                                 Console.WriteLine("Периметр(длина) круга составляэт : {0:#.###} мм", newCircle.Perim(userInputRadius));
@@ -125,7 +124,6 @@ namespace TaskFigure
                             else
                             {
                                 checkSquare = true;
-                                checkAll = true;
                                 Console.WriteLine("Сторона квадрата равна : {0} мм", userInputSide);
                                 Square newSquare = new Square();
                                 Console.WriteLine("Периметр квадрата равен : {0:#.###} мм", newSquare.Perim(userInputSide));
@@ -139,7 +137,10 @@ namespace TaskFigure
 
                     case "3": // Треугольник
                         bool checkTriangle = false; // проверка второго ввода пользователя
-                        Console.WriteLine("Ты выбрал треугольник, введи сторону треугольника в миллиметрах :");
+                        //Console.WriteLine("Ты выбрал треугольник, есть несколько спсобов подсчитать периметр и площать.\nВыбери вариант который тебе известен:");
+                        //Console.WriteLine("\"1\" - Три стороны треугольника a, b, c");
+                        //Console.WriteLine("\"2\" - Три стороны треугольника a, b, c");
+                        //Console.WriteLine("\"3\" - Три стороны треугольника a, b, c");
                         do
                         {
                             double userInputSide = 0;
@@ -151,7 +152,6 @@ namespace TaskFigure
                             else
                             {
                                 checkSquare = true;
-                                checkAll = true;
                                 Console.WriteLine("Сторона треугольника равна : {0} мм", userInputSide);
                                 Triangle newTriangle = new Triangle();
                                 Console.WriteLine("Периметр треугольнка равен : {0:#.###} мм", newTriangle.PerimThreeSide(userInputSide));
@@ -159,6 +159,10 @@ namespace TaskFigure
                                 Console.WriteLine("Цвет треугольника : {0}", newTriangle.Color());
                             }
                         } while (checkTriangle == false);
+                        break;
+                    case "0":
+                        Console.WriteLine("пока)");
+                        checkAll = true;
                         break;
                     default:
                         Console.WriteLine("Ты сделал неправильний выбор, повтори...");
