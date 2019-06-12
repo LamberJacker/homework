@@ -1,17 +1,18 @@
+    
 using System;
 
 namespace TaskFigure
 {
     
-	public class Circle
-	{   
+    public class Circle
+    {   
         private double radius;
         private double area;
         private double perim;
         private string color;
 
         public bool SetChacteristicFigure(string rad) // безопасно установить значение радиуса и посчитать характеристики фигуры
-		{
+        {
             bool userInputRadiusTry = Double.TryParse(rad, out radius);
             if (userInputRadiusTry & radius > 0) 
             {
@@ -24,25 +25,25 @@ namespace TaskFigure
                 return true;
             }
             else return false;
-		}
+        }
         public void ShowCharacteristic() // метод выводит на экран все даные о фигуре
-	    {
+        {
             Console.WriteLine("Радиус круга равен : {0} мм", radius);
             Console.WriteLine("Периметр(длина) круга составляэт : {0:#.###} мм", perim);
             Console.WriteLine("Площадь круга равна : {0:#.###} кв.мм", area);
             Console.WriteLine("Цвет круга : {0}", color);
-		}
-	}
+        }
+    }
 
     public class Square
-	{   
+    {   
         private double side;
         private double perim;
         private double area;
         private string color;
         
         public bool SetChacteristicFigure(string sideString) // безопасно установить значение стороны и посчитать характеристики фигуры
-		{
+        {
             bool userInputSideTry = Double.TryParse(sideString, out side);
             if (userInputSideTry & side > 0) 
             {
@@ -55,15 +56,15 @@ namespace TaskFigure
                 return true;
             }
             else return false;
-		}
+        }
         public void ShowCharacteristic() // метод выводит на экран все даные о фигуре
-	    {
+        {
             Console.WriteLine("Сторона квадрата равна : {0} мм", side);
             Console.WriteLine("Периметр квадрата равен : {0:#.###} мм", perim);
             Console.WriteLine("Площадь квадрата равна : {0:#.###} кв.мм", area);
             Console.WriteLine("Цвет квадрата : {0}", color);
-		}
-	}
+        }
+    }
     
     public class Triangle
     {   
@@ -82,7 +83,7 @@ namespace TaskFigure
             if (Side1Try & Side2Try & Side3Try & side1 > 0 & side2 > 0 & side3 > 0) 
             {
                 perim = (side1 + side2 + side3)/2;
-	    	if (perim < side1 || perim < side2 || perim < side3) return false; // прверка на правильность геометрических даных треугольника
+            if (perim < side1 || perim < side2 || perim < side3) return false; // прверка на правильность геометрических даных треугольника
                 area = Math.Sqrt(perim * (perim - side1) * (perim - side2) * (perim - side3));
                 string[] arrColor = {"Yellow","Green","Blue","Brown","White","Red","Orange","Pink","Gray","Black"};
                 Random rnd = new Random();
@@ -93,12 +94,12 @@ namespace TaskFigure
             else return false;
         }
         public void ShowCharacteristic() // метод выводит на экран все даные о фигуре
-	    {
+        {
             Console.WriteLine("Стороны треугольника равны : {0}, {1}, {2} мм", side1, side2, side3);
             Console.WriteLine("Периметр треугольнка равен : {0:#.###} мм", perim);
             Console.WriteLine("Площадь треугольника равна : {0:#.###} кв.мм", area);
             Console.WriteLine("Цвет треугольника : {0}", color);
-		}
+        }
     }
     
     public class Program
@@ -173,7 +174,7 @@ namespace TaskFigure
                             }
                             else
                             {
-                                checkSquare = true;
+                                checkTriangle = true;
                                 newTriangle.ShowCharacteristic();
                             }
                         } while (checkTriangle == false);
