@@ -82,6 +82,7 @@ namespace TaskFigure
             if (Side1Try & Side2Try & Side3Try & side1 > 0 & side2 > 0 & side3 > 0) 
             {
                 perim = (side1 + side2 + side3)/2;
+	    	if (perim < side1 || perim < side2 || perim < side3) return false; // прверка на правильность геометрических даных треугольника
                 area = Math.Sqrt(perim * (perim - side1) * (perim - side2) * (perim - side3));
                 string[] arrColor = {"Yellow","Green","Blue","Brown","White","Red","Orange","Pink","Gray","Black"};
                 Random rnd = new Random();
