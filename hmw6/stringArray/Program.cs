@@ -113,7 +113,7 @@ namespace TaskFigure
             bool checkAll = false; // проверка первго ввода пользователя
             do
             {
-                Console.WriteLine("\nВводи число фигуры:");
+                Console.WriteLine("\nВводи число фигуры или ноль чтобы выйти:");
                 string userInput = Console.ReadLine(); //выбор пользователя
                 switch (userInput)
                 {
@@ -170,7 +170,7 @@ namespace TaskFigure
                             bool cheker = newTriangle.SetChacteristicFigure(side1, side2, side3);
                             if (cheker == false)
                             {
-                                Console.WriteLine("Ты ввел неправильное значение стороны в мм, повтори...");
+                                Console.WriteLine("Ты ввел неправильное значение сторон в мм, повтори...");
                             }
                             else
                             {
